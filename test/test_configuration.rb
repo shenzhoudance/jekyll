@@ -21,7 +21,7 @@ class TestConfiguration < JekyllUnitTest
     end
 
     should "fix common mistakes" do
-      assert_instance_of Configuration, Configuration.from({})
+      assert_instance_of Configuration, Configuration.fix_common_issues({})
     end
 
     should "add default collections" do
